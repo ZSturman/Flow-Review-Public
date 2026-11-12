@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flow-review"
+version = "0.1.0"
+description = "Reusable Xcode UI-flow recorder and human review tool for iOS/iPadOS/macOS apps."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "PyYAML>=6.0",
+]
+
+[project.scripts]
+flow-review = "flow_review.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+flow_review = [
+    "templates/**/*",
+    "webui/static/**/*",
+]

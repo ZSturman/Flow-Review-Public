@@ -1,0 +1,23 @@
+project:
+  id: sample-flow-app
+  name: Sample Flow App
+device:
+  platform: iOS
+  name: iPhone 17 Pro
+  os: '26.5'
+xcode:
+  project: SampleFlowApp.xcodeproj
+  workspace: null
+  scheme: SampleFlowApp
+  app_target: SampleFlowApp
+  ui_test_target: SampleFlowAppUITests
+  bundle_id: com.flowreview.sampleflowapp
+  build_configuration: Debug
+run:
+  reset_simulator: false
+  review_delay_ms: 200
+  review_speed_delay_ms: 700
+  boot_timeout_s: 120
+  build_timeout_s: 900
+  test_timeout_s: 300
+flows_dir: flows

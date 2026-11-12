@@ -1,0 +1,30 @@
+id: create-item
+name: Create Item
+platform: ios
+tags:
+  - critical
+  - create
+reset_app_state: true
+
+steps:
+  - launch
+  - wait_for:
+      accessibility_id: addButton
+      timeout: 10
+  - screenshot:
+      name: empty-list
+  - tap:
+      accessibility_id: addButton
+  - wait_for:
+      accessibility_id: itemForm
+  - screenshot:
+      name: empty-form
+  - type:
+      accessibility_id: titleField
+      value: Test Item
+  - tap:
+      accessibility_id: saveButton
+  - wait_for:
+      accessibility_id: item-Test Item
+  - checkpoint:
+      name: saved-item
